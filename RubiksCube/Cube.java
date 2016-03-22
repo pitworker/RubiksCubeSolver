@@ -134,82 +134,82 @@ public class Cube
         else if(dir == L){
             for(byte row = 0; row < 3; row++){
                 for(byte col = 0; col < 3; col++){
-                    newFace[row][col] = rFace[col][2 - row];
+                    newFace[row][col] = lFace[col][2 - row];
                 }
             }
 
             for(byte row = 0; row < 3; row++){
-                newLayer[row][0] = fFace[row][2];
-                newLayer[row][1] = uFace[row][2];
+                newLayer[row][0] = fFace[row][0];
+                newLayer[row][1] = uFace[row][0];
                 newLayer[row][2] = bFace[row][2];
-                newLayer[row][3] = dFace[row][2];
+                newLayer[row][3] = dFace[row][0];
             }
             
             for(byte row = 0; row < 3; row++){
                 for(byte col = 0; col < 3; col++){
-                    rFace[row][col] = newFace[row][col];
+                    lFace[row][col] = newFace[row][col];
                 }
             }
 
             for(byte row = 0; row < 3; row++){
-                uFace[row][2] = newLayer[row][0];
-                bFace[row][2] = newLayer[row][1];
-                dFace[row][2] = newLayer[row][2];
-                fFace[row][2] = newLayer[row][3];
+                dFace[row][0] = newLayer[row][0];
+                fFace[row][0] = newLayer[row][1];
+                uFace[row][0] = newLayer[row][2];
+                bFace[row][2] = newLayer[row][3];
             }
         }
         else if(dir == LI){
             for(byte row = 0; row < 3; row++){
                 for(byte col = 0; col < 3; col++){
-                    newFace[row][col] = rFace[2 - col][row];
+                    newFace[row][col] = lFace[2 - col][row];
                 }
             }
 
             for(byte row = 0; row < 3; row++){
-                newLayer[row][0] = fFace[row][2];
-                newLayer[row][1] = uFace[row][2];
+                newLayer[row][0] = fFace[row][0];
+                newLayer[row][1] = uFace[row][0];
                 newLayer[row][2] = bFace[row][2];
-                newLayer[row][3] = dFace[row][2];
+                newLayer[row][3] = dFace[row][0];
             }
             
             for(byte row = 0; row < 3; row++){
                 for(byte col = 0; col < 3; col++){
-                    rFace[row][col] = newFace[row][col];
+                    lFace[row][col] = newFace[row][col];
                 }
             }
 
             for(byte row = 0; row < 3; row++){
-                dFace[row][2] = newLayer[row][0];
-                fFace[row][2] = newLayer[row][1];
-                uFace[row][2] = newLayer[row][2];
-                bFace[row][2] = newLayer[row][3];
+                uFace[row][0] = newLayer[row][0];
+                bFace[row][2] = newLayer[row][1];
+                dFace[row][0] = newLayer[row][2];
+                fFace[row][0] = newLayer[row][3];
             }
         }
         else if(dir == L2){
             for(byte row = 0; row < 3; row++){
                 for(byte col = 0; col < 3; col++){
-                    newFace[row][col] = rFace[2 - col][2 - row];
+                    newFace[row][col] = lFace[2 - col][2 - row];
                 }
             }
 
             for(byte row = 0; row < 3; row++){
-                newLayer[row][0] = fFace[row][2];
-                newLayer[row][1] = uFace[row][2];
+                newLayer[row][0] = fFace[row][0];
+                newLayer[row][1] = uFace[row][0];
                 newLayer[row][2] = bFace[row][2];
-                newLayer[row][3] = dFace[row][2];
+                newLayer[row][3] = dFace[row][0];
             }
             
             for(byte row = 0; row < 3; row++){
                 for(byte col = 0; col < 3; col++){
-                    rFace[row][col] = newFace[row][col];
+                    lFace[row][col] = newFace[row][col];
                 }
             }
 
             for(byte row = 0; row < 3; row++){
                 bFace[row][2] = newLayer[row][0];
-                dFace[row][2] = newLayer[row][1];
-                fFace[row][2] = newLayer[row][2];
-                uFace[row][2] = newLayer[row][3];
+                dFace[row][0] = newLayer[row][1];
+                fFace[row][0] = newLayer[row][2];
+                uFace[row][0] = newLayer[row][3];
             }
         }
     }
