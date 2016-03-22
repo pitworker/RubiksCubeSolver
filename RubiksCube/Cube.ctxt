@@ -1,0 +1,10 @@
+#BlueJ class context
+comment0.params=
+comment0.target=Cube()
+comment1.params=dir
+comment1.target=void\ turn(byte)
+comment2.params=face
+comment2.target=char[][]\ getFace(byte)
+comment3.params=
+comment3.target=void\ printCube()
+numComments=4
